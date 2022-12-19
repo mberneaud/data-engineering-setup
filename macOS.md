@@ -490,7 +490,7 @@ apt-transport-https gnupg software-properties-common direnv sqlite3 make \
 postgresql postgresql-contrib build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
 libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
-gcc default-mysql-server default-libmysqlclient-dev libpython3.8-dev
+gcc default-mysql-server default-libmysqlclient-dev libpython3-dev
 ```
 
 These commands will ask for your password: type it in.
@@ -772,7 +772,7 @@ Time to fork the repo and clone it on your laptop:
 
 ```bash
 mkdir -p ~/code/$GITHUB_USERNAME && cd $_
-gh repo fork lewagon/dotfiles --clone
+gh repo clone lewagon/dotfiles
 ```
 
 Run the `dotfiles` installer.
@@ -824,7 +824,7 @@ Time to fork the repo and clone it on your laptop:
 
 ```bash
 mkdir -p ~/code/$GITHUB_USERNAME && cd $_
-gh repo fork lewagon/dotfiles --clone
+gh repo clone lewagon/dotfiles
 ```
 
 Run the `dotfiles` installer.
@@ -1041,6 +1041,7 @@ Lets install pyenv to manage our python versions:
 
 ```bash
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+source ~/.zprofile
 exec zsh
 ```
 Now install 3.8.14:
